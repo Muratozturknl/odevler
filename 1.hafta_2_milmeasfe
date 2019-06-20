@@ -1,0 +1,3 @@
+mesafe=int(input("Lütfen Km cinsinden mesafe bilgisini giriniz: "))
+mil=1.609344 #km'dir.
+print("Yapılan mesafe",float(mesafe/mil),"mil","olarak hesaplanmıştır.",)
