@@ -1,0 +1,14 @@
+dosya=open("ogrenciNotHesaplama.txt","w")
+print("-"*4,"Öğrenci Not Hesaplama Programı","-"*4)
+isim=input("Öğrencinin Adı-Soyadı: ")
+vize=int(input("Vize Notu\t  : "))
+final=int(input("Final Notu\t  : "))
+ders=int(input("Gelmediği Ders S. : "))
+vize_notu=int(vize*0.30)
+final_notu=int(final*0.50)
+ders_notu=int((100-(ders*5))*0.20)
+ysp=vize_notu+final_notu+ders_notu
+print("Yıl Sonu Puanı\t  :»»", ysp,"«« olarak hesaplanmıştır.", sep="",)
+print("Öğrenci adı-Soyadı:",isim, "\n","Vize Not:",vize, "\n","Final Notu:", final, "\n","Gelmediği Ders Sayısı:",ders,
+      "\n","Yıl Sonu Puanı\t  :»»", ysp,"««", sep="",file=dosya)
+dosya.close()
