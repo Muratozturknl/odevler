@@ -1,0 +1,32 @@
+print("«««~~~ AYLIK GİDER VE GİDER ORANLARINI HESAPLAMA ~~~»»»\n")
+
+gelir=int(input("Aylık Geliriniz\t\t:€"))
+mutfak=int(input("Mutfak giderleriniz\t:€"))
+egitim=int(input("Eğitim giderleriniz\t:€"))
+giyim=int(input("Giyim  giderleriniz\t:€"))
+ulasim=int(input("Ulaşım giderleriniz\t:€"))
+aytpl=mutfak+egitim+giyim+ulasim
+kalan=gelir-aytpl
+ggo=(aytpl*100)/gelir
+
+print("\n","-"*32,sep="")
+print("Aylık toplam gideriniz  : «€", aytpl,"»","\n","Gelir-gider oranı\t: «%",ggo,"»",
+      "\n","Bakiyeniz\t\t: «€",kalan,"»",sep="")
+print("-"*32,"\n", sep="")
+
+my=(mutfak*100)/gelir
+print("Mutfak masrafınız €",mutfak ," gelirinize oranı: %",my, sep="")
+ey=(egitim*100)/gelir
+print("Eğitim masrafınız €", egitim," gelirinize oranı: %",ey, sep="")
+gy=(giyim*100)/gelir
+print("Giyim  masrafınız €", giyim," gelirinize oranı: %",gy, sep="")
+uy=(ulasim*100)/gelir
+print("Ulaşım  masrafınız €", ulasim," gelirinize oranı: %",uy, "\n",sep="")
+
+dosya=open("aylikmasraf.txt","w")
+print("Aylık geliriniz: €",gelir, " Aylık Toplam gideriniz: €",aytpl,
+    "\n","Mutfak masrafınız €",mutfak," gelirinize oranı: %",my,
+    "\n","Eğitim masrafınız €",egitim," gelirinize oranı: %",ey,
+    "\n","Giyim  masrafınız €",giyim," gelirinize oranı: %",gy,
+    "\n","Ulaşım masrafınız €", ulasim," gelirinize oranı: %",uy,"\n",sep="",file=dosya)
+dosya.close()
