@@ -1,0 +1,29 @@
+
+dosya=open("faizHesaplama.txt","w")
+print("~~~~YILLIK FAİZ HESAPLAMA PROGRAMI~~~~", "\n","     Yıllık Faiz Oranı \"%12\" dir")
+ana_para=int(input("Ana Para Miktarı:€"))
+foran=12
+###
+yıl=int(input("Faizde Kalması İstenilen Yıl: "))
+faizyıllık=ana_para*foran*yıl/100
+print("Yatırmış olduğunuz meblağa göre","\n",
+      "YILLIK faiz tutarı:€",faizyıllık," olup faiz süresi sonu ana para ile toplam €",
+      ana_para+faizyıllık," olarak hesaplanmıştır.", sep="")
+
+###
+ay=int(input("Faizde Kalması İstenilen Ay: "))
+faizaylık=ana_para*foran*ay/1200
+print("Yatırmış olduğunuz meblağa göre","\n",
+      "AYLIK faiz tutarı:€",faizaylık," olup faiz süresi sonu ana para ile toplam €",
+      ana_para+faizaylık," olarak hesaplanmıştır.", sep="")
+###
+gün=int(input("Faizde Kalması İstenilen Gün: "))
+faizgünlük=ana_para*foran*gün/36500
+print("Yatırmış olduğunuz meblağa göre","\n",
+      "GÜNLÜK faiz tutarı:€",faizgünlük," olup faiz süresi sonu ana para ile toplam €",
+      ana_para+faizgünlük," olarak hesaplanmıştır.", sep="")
+print(yıl," Yıl sonunda faiz €", faizyıllık," toplam para €",ana_para+faizyıllık,
+      "\n",ay," Ay  sonunda faiz €", faizaylık," toplam para €",ana_para+faizaylık,
+      "\n",gün," Gün sonunda faiz €", faizgünlük," toplam para €",ana_para+faizgünlük,sep="",file=dosya)
+
+dosya.close()
