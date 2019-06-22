@@ -1,1 +1,1 @@
-# odevler
+# odevler/hafta1/
