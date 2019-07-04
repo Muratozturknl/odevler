@@ -1,0 +1,25 @@
+##Kullanicidan aldiginiz sayinin asal sayi olup olmadigini
+##sorgulayan bir program yazmanizi istiyoruz.
+print("~~~~~~Welcome Another Prime Number Game!!~~~~~~")
+print("Please enter a number and see if it is *Prime Number* or Not!!\n")
+
+numexcept=(2,3,5,7)
+while True:
+    try:
+        num=int(input("Your number (to exit 0): "))
+        if num==0  :
+            print("Ending!!")
+            break
+        if num<0:
+            print("Try a number >=2")
+            continue
+        if num==2 or num==3 or num==5 or num==7:
+            print("Your number is a 'Prime number'!!")
+        elif num%num==0 and num%1==0 and num%2!=0 and num%3!=0 and num%4!=0 and  num%5!=0 and num%6!=0 and num%7!=0 and num%8!=0 and num%9!=0:
+            print("Your number is a 'Prime number'!!")
+        else:
+            print("Your number is NOT a 'Prime number'!!")
+
+    except ValueError:
+        print("Please Enter A Number")
+        
