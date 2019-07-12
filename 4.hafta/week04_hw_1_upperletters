@@ -1,0 +1,24 @@
+##2-)Kullanıcıdan bir input alınız. Girmiş olduğu inputta büyük harf sayısı,
+##küçük harf sayısı, rakam sayısı ve bunların haricindeki
+##özel karakter sayılarını veren bir program yazınız.!
+uppercase="ABCDEFGĞHIİJKLMNOÖPRSŞTUÜWQVYZ"
+lowercase="abcdefgğhıijklmnoöpresştuüvwqyz"
+number="0123456789"
+a=input ("Please ENTER a word or a sentence!(exit» 0)")
+uppercase_counter=0
+lowercase_counter=0
+number_counter=0
+specialchar_counter=0
+for i in a:
+    if i in uppercase:
+        uppercase_counter+=1
+    elif i in lowercase:
+        lowercase_counter+=1
+    elif i in number:
+        number_counter+=1
+else:
+    specialchar_counter+=1
+
+    print("Your enter contains\n","Uppercase: ",uppercase_counter,
+          "Lowercase:    ",lowercase_counter,"\n","Number:    ",number_counter,
+          "Special Char.: ",specialchar_counter)
