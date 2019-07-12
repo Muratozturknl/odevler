@@ -1,0 +1,15 @@
+##3-)Kullanıcıdan bir input alınız. Girmiş olduğu inputtaki rakamların
+##toplamını veren bir program yazınız. (Kullanıcı rakam girmek zorunda değil.
+##farklı karakter girişi de yapabilir.)
+##Örnek input = "art12kl4*"
+while True:
+    a=input ("Please ENTER a string\nfull of random numbers and characters!(exit » q) \n»» ") 
+    sum=0
+    if a== "q":
+        print("See you again!")
+        break
+    for i in a:
+        if i.isnumeric()==True:
+            sum+=int(i)
+        
+    print("The sum of numbers in your entery is\n",sum)
