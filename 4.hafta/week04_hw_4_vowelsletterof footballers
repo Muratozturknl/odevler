@@ -1,0 +1,14 @@
+##4-)Futbolcular dosyasındaki futbolculardan
+##ismi sesli harf ile başlayanları
+##ayrı bir dosyaya yazdırınız.
+
+with open ("futbolcular.txt") as file:
+    vowels="AEIOUÖÜİaeiouöü"
+    players=file.readlines ()
+    for i in players:
+        for a in vowels:
+            if i.startswith(a):
+                print(i)
+                with open ("vowelscharplayers.txt","a") as file:
+                    file.write(i)
+                    file.close()
