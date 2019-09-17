@@ -1,0 +1,47 @@
+# 2.ODEV: SAYI TAHMIN OYUNU
+# 	Bir degiskene 0-100 arasinda bir deger atayin. Kullanicidan bu sayiyi
+# tahmin etmesini isteyin. Kullaniciyi yaptigi tahminlere gore yonlendirin.
+# Kacinci denemede bildigini soyleyin.
+# 	Ornek:
+# 		sayi = 76
+# 		kullanicinin tahmini = 5
+# 		cikti = cok dusuk tahminde bulundun daha yuksek bir sayi girmelisin.
+#
+# 		kullanicinin tahmini = 95
+# 		cikti = fazla yukari ciktin biraz asagi in.
+#
+# 		kullanicinin tahmini = 80
+# 		cikti = cok yaklastin biraz daha inmelisin
+#
+# 		kullanicinin tahmini = 73
+# 		cikti = cok yaklastin biraz daha cikmalisin
+#
+# 		kullanicinin tahmini = 76
+# 		cikti= tebrikler sayiyi 5.denemede buldunuz
+import time
+print("Mini Number Game")
+number=50
+key=1
+times=0
+while key==1 :
+    times+=1
+    no=int(input('Pls your guess a number between 1-100--> '))
+    if no > 100:
+        print("Pls enter between 1-100!!")
+    elif no == number :
+        print("You find in", times, "times!!", "yes, it is", no, "<--\n")
+        print("Görüşmek üzere, prg sonlandırılıyor!!")
+        time.sleep(1)
+        break
+    elif no-number > 30 :
+        print("Too high, try lower!")
+    elif no-number > 15 :
+        print("A little lower !")
+    elif no-number > 0 :
+        print('Too closer, a bit lower!')
+    elif no-number <-30 :
+        print("Too lower, more higher!")
+    elif no-number <-15 :
+        print("A little upper!!")
+    elif no-number <0 :
+        print("One more higher!")
