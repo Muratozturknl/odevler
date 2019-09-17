@@ -1,0 +1,30 @@
+# kullanıcıdan username ve password girmesi istenir
+print("---Mini Accout Keeper---")
+record = True
+order = 1
+transaction = 1
+# isim ve şifre kaydı alıp dosyada varmı yok mu kontrol ediliyor
+while record == True:
+    name = input("Enter username pls.. ")
+    password = input("Enter password pls.. ")
+
+    with open("hesapolusturma.txt", "r") as nameliste:
+        text = nameliste.read()
+        if (")" + name + "--") in text:
+            print("\nThis name is already taken,\nPls type another username!!")
+            continue
+    with open("hesapolusturma.txt", "a") as nameliste:
+        print(order, ")", name, "--""\t\t", password, sep="", file=nameliste)
+        order += 1
+#devam edip edilmeyeceği soruluyor
+    while True:
+        sel = input("To continue -->e, to exit --> h\n")
+        if sel == "e":
+            record = True
+            break
+        if sel == "h":
+            record = False
+            break
+        else:
+            print("Tyr one of those given")
+            continue
